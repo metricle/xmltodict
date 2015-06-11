@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-"Makes working with XML feel like you are working with JSON"
+# -*- coding: utf-8 -*-
 
 from xml.parsers import expat
 from xml.sax.saxutils import XMLGenerator
@@ -11,13 +10,7 @@ except ImportError:  # pragma no cover
         from StringIO import StringIO
     except ImportError:
         from io import StringIO
-try:  # pragma no cover
-    from collections import OrderedDict
-except ImportError:  # pragma no cover
-    try:
-        from ordereddict import OrderedDict
-    except ImportError:
-        OrderedDict = dict
+OrderedDict = dict
 
 try:  # pragma no cover
     _basestring = basestring
